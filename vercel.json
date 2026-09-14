@@ -28,7 +28,7 @@
     },
     {
       "src": "^(.*)$",
-      "dest": "${MAIN_APP_URL}/$1",
+      "dest": "${MAIN_APP_URL}$0",
       "env": ["MAIN_APP_URL"]
     }
   ]
