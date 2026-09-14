@@ -16,6 +16,16 @@
       "dest": "${SEARCH_APP_URL}/0$1",
       "env": ["SEARCH_APP_URL"]
     },
+        {
+      "src": "^/_next(?:/.*)?$",
+      "dest": "${SEARCH_APP_URL}$0",
+      "env": ["SEARCH_APP_URL"]
+    },
+    {
+      "src": "^/(?:favicon\\.ico|robots\\.txt|sitemap\\.xml)$",
+      "dest": "${SEARCH_APP_URL}$0",
+      "env": ["SEARCH_APP_URL"]
+    },
     {
       "src": "^(.*)$",
       "dest": "${MAIN_APP_URL}/$1",
