@@ -1,21 +1,25 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "rewrites": [
+  "routes": [
     {
-      "source": "/search",
-      "destination": "$SEARCH_APP_URL/search"
+      "src": "^/search$",
+      "dest": "${SEARCH_APP_URL}/search",
+      "env": ["SEARCH_APP_URL"]
     },
     {
-      "source": "/search/:path*",
-      "destination": "$SEARCH_APP_URL/search/:path*"
+      "src": "^/search/(.*)$",
+      "dest": "${SEARCH_APP_URL}/search/$1",
+      "env": ["SEARCH_APP_URL"]
     },
     {
-      "source": "/0(.*)",
-      "destination": "$SEARCH_APP_URL/0$1"
+      "src": "^/0(.*)$",
+      "dest": "${SEARCH_APP_URL}/0$1",
+      "env": ["SEARCH_APP_URL"]
     },
     {
-      "source": "/:path*",
-      "destination": "$MAIN_APP_URL/:path*"
+      "src": "^(.*)$",
+      "dest": "${MAIN_APP_URL}/$1",
+      "env": ["MAIN_APP_URL"]
     }
   ]
 }
