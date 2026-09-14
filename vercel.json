@@ -1,0 +1,21 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/search",
+      "destination": "$SEARCH_APP_URL/search"
+    },
+    {
+      "source": "/search/:path*",
+      "destination": "$SEARCH_APP_URL/search/:path*"
+    },
+    {
+      "source": "/0(.*)",
+      "destination": "$SEARCH_APP_URL/0$1"
+    },
+    {
+      "source": "/:path*",
+      "destination": "$MAIN_APP_URL/:path*"
+    }
+  ]
+}
