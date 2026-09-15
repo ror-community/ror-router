@@ -2,6 +2,11 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "routes": [
     {
+      "src": "^/typeahead$",
+      "dest": "${SEARCH_APP_URL}/typeahead",
+      "env": ["SEARCH_APP_URL"]
+    },
+    {
       "src": "^/search$",
       "dest": "${SEARCH_APP_URL}/search",
       "env": ["SEARCH_APP_URL"]
