@@ -22,7 +22,7 @@
       "env": ["SEARCH_APP_URL"]
     },
     {
-      "src": "^/(?:favicon\\.ico|robots\\.txt|sitemap\\.xml)$",
+      "src": "^/(?:favicon\\.ico|robots\\.txt|sitemap\\.xml|images/.*)$",
       "dest": "${SEARCH_APP_URL}$0",
       "env": ["SEARCH_APP_URL"]
     },
