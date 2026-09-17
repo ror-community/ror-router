@@ -7,6 +7,11 @@
       "env": ["SEARCH_APP_URL"]
     },
     {
+      "src": "^/api-client-id$",
+      "dest": "${SEARCH_APP_URL}/api-client-id",
+      "env": ["SEARCH_APP_URL"]
+    },
+    {
       "src": "^/search$",
       "dest": "${SEARCH_APP_URL}/search",
       "env": ["SEARCH_APP_URL"]
